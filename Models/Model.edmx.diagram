@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a8d9520e96d64b9680c2a3c29b6f77a0" Name="Diagram1" ZoomLevel="40">
+        <EntityTypeShape EntityType="DatabaseProjectModel.Cart" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseProjectModel.MsBrand" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseProjectModel.MsCategory" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseProjectModel.MsJewel" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseProjectModel.MsUser" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseProjectModel.TransactionDetail" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseProjectModel.TransactionHeader" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <AssociationConnector Association="DatabaseProjectModel.FK_Cart_ToJewel" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseProjectModel.FK_Cart_ToUser" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseProjectModel.FK_MsJewel_ToBrand" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseProjectModel.FK_MsJewel_ToCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseProjectModel.FK_TransactionDetail_ToJewel" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseProjectModel.FK_TransactionHeader_ToUser" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseProjectModel.FK_TransactionDetail_ToHeader" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
