@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\College\\Semester 4\\Pattern Software Design Lab\\Project\\Pattern Software Design Project - Group 4\\PSDLabProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F8DC053B-BADE-45FE-B28C-4E90DF31A132}|PSDLabProject.csproj|d:\\college\\semester 4\\pattern software design lab\\project\\pattern software design project - group 4\\psdlabproject\\repositories\\jewelrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8DC053B-BADE-45FE-B28C-4E90DF31A132}|PSDLabProject.csproj|solutionrelative:repositories\\jewelrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8DC053B-BADE-45FE-B28C-4E90DF31A132}|PSDLabProject.csproj|d:\\college\\semester 4\\pattern software design lab\\project\\pattern software design project - group 4\\psdlabproject\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8DC053B-BADE-45FE-B28C-4E90DF31A132}|PSDLabProject.csproj|solutionrelative:repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F8DC053B-BADE-45FE-B28C-4E90DF31A132}|PSDLabProject.csproj|d:\\college\\semester 4\\pattern software design lab\\project\\pattern software design project - group 4\\psdlabproject\\models\\model.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
       "RelativeMoniker": "D:0:0:{F8DC053B-BADE-45FE-B28C-4E90DF31A132}|PSDLabProject.csproj|solutionrelative:models\\model.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
     }
@@ -27,6 +35,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "JewelRepository.cs",
+              "DocumentMoniker": "D:\\College\\Semester 4\\Pattern Software Design Lab\\Project\\Pattern Software Design Project - Group 4\\PSDLabProject\\Repositories\\JewelRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\JewelRepository.cs",
+              "ToolTip": "D:\\College\\Semester 4\\Pattern Software Design Lab\\Project\\Pattern Software Design Project - Group 4\\PSDLabProject\\Repositories\\JewelRepository.cs",
+              "RelativeToolTip": "Repositories\\JewelRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T04:18:39.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\College\\Semester 4\\Pattern Software Design Lab\\Project\\Pattern Software Design Project - Group 4\\PSDLabProject\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\UserRepository.cs",
+              "ToolTip": "D:\\College\\Semester 4\\Pattern Software Design Lab\\Project\\Pattern Software Design Project - Group 4\\PSDLabProject\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T03:54:24.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Model.edmx [Diagram1]",
               "DocumentMoniker": "D:\\College\\Semester 4\\Pattern Software Design Lab\\Project\\Pattern Software Design Project - Group 4\\PSDLabProject\\Models\\Model.edmx",
               "RelativeDocumentMoniker": "Models\\Model.edmx",
