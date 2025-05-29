@@ -133,6 +133,8 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\JewelRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="Models\Model.edmx">
@@ -153,7 +155,6 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Handlers\" />
-    <Folder Include="Repositories\" />
     <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
