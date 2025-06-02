@@ -36,14 +36,9 @@ namespace PSDLabProject.Repositories
             return "Jewel removed successfully.";
         }
 
-        public static List<dynamic> getAllJewels()
+        public static List<MsJewel> getJewelList()
         {
-            return (from j in db.MsJewels
-                    join c in db.MsCategories
-                    on j.CategoryID equals c.CategoryID
-                    join b in db.MsBrands on j.BrandID equals b.BrandID
-                    select new {j.JewelName, c.CategoryName, b.BrandName,
-                    b.BrandCountry, b.BrandClass, j.JewelPrice, j.JewelReleaseYear}).ToList<dynamic>();
+            return db.MsJewels.ToList();
         }
     }
 }
