@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DatabaseProjectModelStoreContainer" CdmEntityContainer="DatabaseProjectEntities">
+    <EntitySetMapping Name="Carts">
+      <EntityTypeMapping TypeName="DatabaseProjectModel.Cart">
+        <MappingFragment StoreEntitySet="Cart">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="JewelID" ColumnName="JewelID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MsBrands">
+      <EntityTypeMapping TypeName="DatabaseProjectModel.MsBrand">
+        <MappingFragment StoreEntitySet="MsBrand">
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="BrandCountry" ColumnName="BrandCountry" />
+          <ScalarProperty Name="BrandClass" ColumnName="BrandClass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MsCategories">
+      <EntityTypeMapping TypeName="DatabaseProjectModel.MsCategory">
+        <MappingFragment StoreEntitySet="MsCategory">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MsJewels">
+      <EntityTypeMapping TypeName="DatabaseProjectModel.MsJewel">
+        <MappingFragment StoreEntitySet="MsJewel">
+          <ScalarProperty Name="JewelID" ColumnName="JewelID" />
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="JewelName" ColumnName="JewelName" />
+          <ScalarProperty Name="JewelPrice" ColumnName="JewelPrice" />
+          <ScalarProperty Name="JewelReleaseYear" ColumnName="JewelReleaseYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MsUsers">
+      <EntityTypeMapping TypeName="DatabaseProjectModel.MsUser">
+        <MappingFragment StoreEntitySet="MsUser">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserDOB" ColumnName="UserDOB" />
+          <ScalarProperty Name="UserGender" ColumnName="UserGender" />
+          <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionDetails">
+      <EntityTypeMapping TypeName="DatabaseProjectModel.TransactionDetail">
+        <MappingFragment StoreEntitySet="TransactionDetail">
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="JewelID" ColumnName="JewelID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionHeaders">
+      <EntityTypeMapping TypeName="DatabaseProjectModel.TransactionHeader">
+        <MappingFragment StoreEntitySet="TransactionHeader">
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="TransactionStatus" ColumnName="TransactionStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

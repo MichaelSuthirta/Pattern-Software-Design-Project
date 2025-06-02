@@ -89,6 +89,7 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\JewelPages\UserJewelViewer.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -96,6 +97,7 @@
     <Compile Include="Factories\JewelFactory.cs" />
     <Compile Include="Factories\TransactionDetailsFactory.cs" />
     <Compile Include="Factories\UserFactory.cs" />
+    <Compile Include="Handlers\Handler.cs" />
     <Compile Include="Models\Cart.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -135,6 +137,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\JewelRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Views\JewelPages\UserJewelViewer.aspx.cs">
+      <DependentUpon>UserJewelViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\JewelPages\UserJewelViewer.aspx.designer.cs">
+      <DependentUpon>UserJewelViewer.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="Models\Model.edmx">
@@ -154,8 +163,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Handlers\" />
-    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
