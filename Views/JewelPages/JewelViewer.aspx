@@ -17,8 +17,8 @@
                     <asp:BoundField HeaderText="Price" DataField="JewelPrice"/>
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:Button ID="detailButton" runat="server" Text="Details"
-                                OnCommand="detailButton_Command" CommandArgument='<% # Eval("JewelID") %>'/>
+                            <asp:LinkButton ID="detailButton" runat="server" Text="Details"
+                                OnCommand="detailButton_Command" CommandArgument='<%#Eval("JewelID")%>'/>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

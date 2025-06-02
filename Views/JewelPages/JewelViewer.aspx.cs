@@ -19,17 +19,17 @@ namespace PSDLabProject.Views.JewelPages
 
         protected void detailButton_Command(object sender, CommandEventArgs e)
         {
-            errorMsg.Text = "Unable to view details";
-            //int.TryParse(e.CommandArgument.ToString(), out int ID);
-            //string url = JewelController.accessDetailPage(ID);
-            //if(url == "Not found.")
-            //{
-            //    errorMsg.Text = "Unable to view details";
-            //}
-            //else
-            //{
-            //    Response.Redirect(string.Format("./{0}", url));
-            //}
+            //errorMsg.Text = "Unable to view details";
+            int ID = Convert.ToInt32(e.CommandArgument);
+            string url = JewelController.accessDetailPage(ID);
+            if (url == "Not found.")
+            {
+                errorMsg.Text = "Unable to view details";
+            }
+            else
+            {
+                Response.Redirect("./" + url);
+            }
         }
     }
 }

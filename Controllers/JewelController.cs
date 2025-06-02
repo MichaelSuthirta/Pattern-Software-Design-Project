@@ -23,7 +23,7 @@ namespace PSDLabProject.Controllers
                 return "Not found";
             }
             
-            return (string.Format("User/Details.aspx?id={0}", jewelID.ToString()));
+            return "User/Details.aspx?id=" + jewelID.ToString();
         }
 
         public static MsJewel getJewel(int ID)
