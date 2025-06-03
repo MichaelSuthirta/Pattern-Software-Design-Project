@@ -29,8 +29,9 @@ namespace PSDLabProject.Repositories
             return "Jewel added successfully.";
         }
 
-        public static string deleteJewel(MsJewel jewel)
+        public static string deleteJewel(int targetId)
         {
+            MsJewel jewel = findJewelByID(targetId);
             db.MsJewels.Remove(jewel);
             db.SaveChanges();
             return "Jewel removed successfully.";

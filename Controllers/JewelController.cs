@@ -125,5 +125,14 @@ namespace PSDLabProject.Controllers
             int.TryParse(yearStr, out int year);
             return Handler.updateJewelData(id, name, brand, category, price, year);
         }
+
+        public static string deleteJewel(int jewelID)
+        {
+            if (!jewelExists(jewelID))
+            {
+                return "Jewel cannot be found.";
+            }
+            return Handler.deleteJewel(jewelID);
+        }
     }
 }

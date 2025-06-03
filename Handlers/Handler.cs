@@ -92,5 +92,9 @@ namespace PSDLabProject.Handlers
             int categoryID = getCategoryID(category);
             return JewelRepository.updateJewelData(id, name, brandID, categoryID, price, year);
         }
+        public static string deleteJewel(int jewelID)
+        {
+            return JewelRepository.deleteJewel(jewelID);
+        }
     }
 }

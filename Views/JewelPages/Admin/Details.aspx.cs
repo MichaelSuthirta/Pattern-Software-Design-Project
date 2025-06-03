@@ -38,16 +38,17 @@ namespace PSDLabProject.Views.JewelPages.Admin
 
         protected void deleteButton_Click(object sender, EventArgs e)
         {
-            int targetId = Convert.ToInt32(DeleteTextBox.Text);
+            int.TryParse(Request.QueryString["id"], out int targetId);
 
-            MsJewel foundJewel = JewelRepository.findJewelByID(targetId);
-            if (foundJewel != null)
+            string result = JewelController.deleteJewel(targetId);
+
+            if(result.Equals("Jewel removed successfully."))
             {
-                JewelRepository.deleteJewel(foundJewel);
+                Response.Redirect("~\\Views\\JewelPages\\JewelViewer.aspx");
             }
             else
             {
-                return;
+                msgLabel.Text = result;
             }
         }
     }
