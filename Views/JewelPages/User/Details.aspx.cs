@@ -29,5 +29,21 @@ namespace PSDLabProject.Views.JewelPages.User
             MsCategory category = JewelController.getJewelCategory(id);
             fillDetails(jewel, brand, category);
         }
+
+        protected void addToCartButton_Click(object sender, EventArgs e)
+        {
+            int jewelId = Convert.ToInt32(Request.QueryString["id"]);
+            int userId = Convert.ToInt32(Session["UserID"]);
+            int.TryParse(qtyBox.Text, out int qty);
+            string res = CartController.createCart(jewelId, userId, qty);
+            if(res.Equals("Added item to cart."))
+            {
+                Response.Redirect(".\\Cart.aspx");
+            }
+            else
+            {
+                msgText.Text = res;
+            }
+        }
     }
 }

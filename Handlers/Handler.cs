@@ -10,6 +10,10 @@ namespace PSDLabProject.Handlers
 {
     public class Handler
     {
+        public static string createCart(int userID, int jewelId, int quantity)
+        {
+            return CartRepository.createCart(userID, jewelId, quantity);
+        }
 
         public static List<Cart> GetCartItems(int userId) => Handler.GetCartItems(userId);
 

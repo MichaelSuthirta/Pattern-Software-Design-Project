@@ -31,8 +31,13 @@
             <asp:Label ID="Label9" runat="server" Text="Jewel Release Year: "></asp:Label>
             <asp:Label ID="yearLabel" runat="server" Text=""></asp:Label>
             <br />
-
-            <asp:Button ID="addToCartButton" runat="server" Text="Add to Cart" />
+            <br />
+            <asp:Label ID="Label6" runat="server" Text="Quantity of item to buy: "></asp:Label>
+            <asp:TextBox ID="qtyBox" runat="server" TextMode="Number"></asp:TextBox>
+            <br />
+            <asp:Button ID="addToCartButton" runat="server" Text="Add to Cart" OnClick="addToCartButton_Click"/>
+            <br />
+            <asp:Label ID="msgText" runat="server" Text=""></asp:Label>
         </div>
     </form>
 </body>

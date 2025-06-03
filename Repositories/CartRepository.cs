@@ -1,4 +1,5 @@
-﻿using PSDLabProject.Models;
+﻿using PSDLabProject.Factories;
+using PSDLabProject.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,13 @@ namespace PSDLabProject.Repositories
             public string Brand { get; set; }
             public int Quantity { get; set; }
             public decimal Subtotal { get; set; }
+        }
+
+        public static string createCart(int userId, int jewelId, int quantity)
+        {
+            db.Carts.Add(CartFactory.createNewCart(jewelId, userId, quantity));
+            db.SaveChanges();
+            return "Added item to cart.";
         }
 
         public static List<CartItemView> GetCartItems(int userId)
@@ -89,5 +97,4 @@ namespace PSDLabProject.Repositories
             db.SaveChanges();
         }
     }
-
 }
