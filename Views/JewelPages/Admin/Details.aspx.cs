@@ -1,5 +1,6 @@
 ﻿using PSDLabProject.Controllers;
 using PSDLabProject.Models;
+using PSDLabProject.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,7 +38,17 @@ namespace PSDLabProject.Views.JewelPages.Admin
 
         protected void deleteButton_Click(object sender, EventArgs e)
         {
+            int targetId = Convert.ToInt32(DeleteTextBox.Text);
 
+            MsJewel foundJewel = JewelRepository.findJewelByID(targetId);
+            if (foundJewel != null)
+            {
+                JewelRepository.deleteJewel(foundJewel);
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

@@ -34,6 +34,7 @@
 
             <asp:Button ID="updateButton" runat="server" Text="Update Details" OnClick="updateButton_Click"/>
             <br />
+            <asp:TextBox ID="DeleteTextBox" runat="server"></asp:TextBox>
             <asp:Button ID="deleteButton" runat="server" Text="Remove Jewel" OnClick="deleteButton_Click"/>
         </div>
     </form>

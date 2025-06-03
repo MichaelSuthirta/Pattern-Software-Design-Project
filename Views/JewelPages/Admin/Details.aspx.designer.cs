@@ -159,6 +159,15 @@ namespace PSDLabProject.Views.JewelPages.Admin
         protected global::System.Web.UI.WebControls.Button updateButton;
 
         /// <summary>
+        /// DeleteTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DeleteTextBox;
+
+        /// <summary>
         /// deleteButton control.
         /// </summary>
         /// <remarks>
