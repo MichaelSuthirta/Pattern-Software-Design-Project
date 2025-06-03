@@ -89,13 +89,19 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\JewelPages\Admin\Details.aspx" />
+    <Content Include="Views\JewelPages\Admin\UpdateJewel.aspx" />
+    <Content Include="Views\JewelPages\JewelViewer.aspx" />
+    <Content Include="Views\JewelPages\User\Details.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\JewelController.cs" />
     <Compile Include="Factories\HeaderFactory.cs" />
     <Compile Include="Factories\JewelFactory.cs" />
     <Compile Include="Factories\TransactionDetailsFactory.cs" />
     <Compile Include="Factories\UserFactory.cs" />
+    <Compile Include="Handlers\Handler.cs" />
     <Compile Include="Models\Cart.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -135,6 +141,34 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\JewelRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Views\JewelPages\Admin\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\JewelPages\Admin\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\JewelPages\Admin\UpdateJewel.aspx.cs">
+      <DependentUpon>UpdateJewel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\JewelPages\Admin\UpdateJewel.aspx.designer.cs">
+      <DependentUpon>UpdateJewel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\JewelPages\JewelViewer.aspx.cs">
+      <DependentUpon>JewelViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\JewelPages\JewelViewer.aspx.designer.cs">
+      <DependentUpon>JewelViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\JewelPages\User\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\JewelPages\User\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="Models\Model.edmx">
@@ -152,11 +186,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Handlers\" />
-    <Folder Include="Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
