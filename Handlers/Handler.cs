@@ -80,6 +80,12 @@ namespace PSDLabProject.Handlers
         {
             return JewelRepository.getCategoryID(categoryName);
         }
+        public static string addJewel(string name, string brand, string category, int price, int year)
+        {
+            int brandID = getBrandID(brand);
+            int categoryID = getCategoryID(category);
+            return JewelRepository.addJewel(name, brandID, categoryID, price, year);
+        }
         public static string updateJewelData(int id, string name, string brand, string category, int price, int year)
         {
             int brandID = getBrandID(brand);
