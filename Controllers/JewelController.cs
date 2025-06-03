@@ -23,7 +23,7 @@ namespace PSDLabProject.Controllers
                 return "Not found";
             }
             
-            return "User/Details.aspx?id=" + jewelID.ToString();
+            return "Admin\\Details.aspx?id=" + jewelID.ToString();
         }
 
         public static MsJewel getJewel(int ID)
@@ -43,6 +43,62 @@ namespace PSDLabProject.Controllers
         public static MsCategory getJewelCategory(int jewelID)
         {
             return Handler.getJewelCategory(jewelID);
+        }
+
+        public static List<string> getBrandNames()
+        {
+            return Handler.getBrandNames();
+        }
+
+        public static List<string> getCategoryNames()
+        {
+            return Handler.getCategoryNames();
+        }
+
+        private static bool correctLength(string str, int minLength, int maxLength)
+        {
+            if(str.Length < minLength || str.Length > maxLength)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private static bool correctJewelNameLength(string name)
+        {
+            if(!correctLength(name, 3, 25)){
+                return false;
+            }
+            return true;
+        }
+
+        public static string updateJewelData(int id, string name, string brand, string category, string priceStr, string yearStr)
+        {
+            if (!jewelExists(id))
+            {
+                return "Jewel cannot be found";
+            }
+            if (!correctJewelNameLength(name))
+            {
+                return "Name length must be between 3 and 25";
+            }
+            if(!int.TryParse(priceStr, out int price))
+            {
+                return "Price must be a number";
+            }
+            if (!int.TryParse(yearStr, out int year))
+            {
+                return "Year must be a number";
+            }
+            if (price <= 25)
+            {
+                return "Price must be above $25";
+            }
+            if(year < 2025)
+            {
+                return "Invalid year, must be above the current year";
+            }
+            return Handler.updateJewelData(id, name, brand, category, price, year);
         }
     }
 }

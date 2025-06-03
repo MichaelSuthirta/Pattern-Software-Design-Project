@@ -14,6 +14,14 @@ namespace PSDLabProject.Handlers
         {
             return JewelRepository.getJewelList();
         }
+        public static List<string> getBrandNames()
+        {
+            return JewelRepository.getBrandNames();
+        }
+        public static List<string> getCategoryNames()
+        {
+            return JewelRepository.getCategoryNames();
+        }
 
         public static bool jewelExists(int ID)
         {
@@ -62,6 +70,21 @@ namespace PSDLabProject.Handlers
                 return null;
             }
             return findCategoryByID(jewel.CategoryID);
+        }
+
+        private static int getBrandID(string brandName)
+        {
+            return JewelRepository.getBrandID(brandName);
+        }
+        private static int getCategoryID(string categoryName)
+        {
+            return JewelRepository.getCategoryID(categoryName);
+        }
+        public static string updateJewelData(int id, string name, string brand, string category, int price, int year)
+        {
+            int brandID = getBrandID(brand);
+            int categoryID = getCategoryID(category);
+            return JewelRepository.updateJewelData(id, name, brandID, categoryID, price, year);
         }
     }
 }
