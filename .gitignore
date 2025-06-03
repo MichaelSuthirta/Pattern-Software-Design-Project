@@ -2,3 +2,7 @@
 *.suo
 *.mdf
 *.ldf
+*.cache
+*.json
+/.vs/PSDLabProject/v17/DocumentLayout.backup.json
+/.vs/PSDLabProject/v17/DocumentLayout.json
