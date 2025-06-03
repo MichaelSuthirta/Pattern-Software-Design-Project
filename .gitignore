@@ -6,3 +6,4 @@
 *.json
 /.vs/PSDLabProject/v17/DocumentLayout.backup.json
 /.vs/PSDLabProject/v17/DocumentLayout.json
+/obj/Debug/PSDLabProject.csproj.AssemblyReference.cache
