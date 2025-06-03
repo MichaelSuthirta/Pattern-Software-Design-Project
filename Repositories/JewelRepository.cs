@@ -56,6 +56,19 @@ namespace PSDLabProject.Repositories
         {
             return db.MsCategories.Where(x => x.CategoryName == categoryName).Select(x => x.CategoryID).FirstOrDefault();
         }
+        public static string addJewel(string name, int brandID, int categoryID, int price, int year)
+        {
+            db.MsJewels.Add(new MsJewel()
+            {
+                JewelName = name,
+                BrandID = brandID,
+                CategoryID = categoryID,
+                JewelPrice = price,
+                JewelReleaseYear = year
+            });
+            db.SaveChanges();
+            return "Jewel added successfully.";
+        }
         public static string updateJewelData(int id, string name, int brandID, int categoryID, int price, int year)
         {
             MsJewel jewel = findJewelByID(id);
