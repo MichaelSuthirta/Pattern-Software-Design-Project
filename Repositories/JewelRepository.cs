@@ -40,5 +40,33 @@ namespace PSDLabProject.Repositories
         {
             return db.MsJewels.ToList();
         }
+        public static List<string> getBrandNames()
+        {
+            return db.MsBrands.Select(x => x.BrandName).ToList();
+        }
+        public static List<string> getCategoryNames()
+        {
+            return db.MsCategories.Select(x => x.CategoryName).ToList();
+        }
+        public static int getBrandID(string brandName)
+        {
+            return db.MsBrands.Where(x => x.BrandName == brandName).Select(x => x.BrandID).FirstOrDefault();
+        }
+        public static int getCategoryID(string categoryName)
+        {
+            return db.MsCategories.Where(x => x.CategoryName == categoryName).Select(x => x.CategoryID).FirstOrDefault();
+        }
+        public static string updateJewelData(int id, string name, int brandID, int categoryID, int price, int year)
+        {
+            MsJewel jewel = findJewelByID(id);
+
+            jewel.JewelName = name;
+            jewel.JewelPrice = price;
+            jewel.JewelReleaseYear = year;
+            jewel.BrandID = brandID;
+            jewel.CategoryID = categoryID;
+            db.SaveChanges();
+            return "Updated data successfully.";
+        }
     }
 }

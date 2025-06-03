@@ -28,7 +28,7 @@ namespace PSDLabProject.Views.JewelPages
             }
             else
             {
-                Response.Redirect("./" + url);
+                Response.Redirect(".\\" + url);
             }
         }
     }
