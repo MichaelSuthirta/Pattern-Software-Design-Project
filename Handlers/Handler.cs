@@ -10,6 +10,47 @@ namespace PSDLabProject.Handlers
 {
     public class Handler
     {
+
+        public static List<Cart> GetCartItems(int userId) => Handler.GetCartItems(userId);
+
+        public static void UpdateCartItem(int userId, int jewelId, int quantity)
+        {
+            CartRepository.UpdateCartItem(userId, jewelId, quantity);
+        }
+            
+
+        public static void RemoveCartItem(int userId, int jewelId)
+        {
+            CartRepository.RemoveCartItem(userId, jewelId);
+        }
+
+
+        public static void ClearCart(int userId) 
+        {
+            CartRepository.ClearCart(userId);
+        }
+
+        public static decimal CalculateTotal(List<Cart> items)
+        {
+            decimal total = 0;
+            foreach (var item in items) total += item.Quantity * item.MsJewel.JewelPrice;
+            return total;
+        }
+
+        public static void CheckoutCart(int userId, string paymentMethod)
+        {
+            var items = CartRepository.GetCartItems(userId);
+            if (items.Count == 0) return;
+
+            int headerId = CartRepository.CreateTransactionHeader(userId, paymentMethod);
+
+            foreach (var item in items)
+            {
+                CartRepository.CreateTransactionDetail(headerId, item);
+            }
+
+            CartRepository.ClearCart(userId);
+        }
         public static List<MsJewel> getJewelList()
         {
             return JewelRepository.getJewelList();

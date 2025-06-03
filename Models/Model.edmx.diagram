@@ -5,12 +5,12 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="a8d9520e96d64b9680c2a3c29b6f77a0" Name="Diagram1" ZoomLevel="88">
-        <EntityTypeShape EntityType="DatabaseProjectModel.Cart" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseProjectModel.Cart" Width="1.5" PointX="10.875" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DatabaseProjectModel.MsBrand" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DatabaseProjectModel.MsCategory" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseProjectModel.MsJewel" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseProjectModel.MsUser" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseProjectModel.TransactionDetail" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseProjectModel.MsJewel" Width="1.5" PointX="7.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseProjectModel.MsUser" Width="1.5" PointX="8.625" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseProjectModel.TransactionDetail" Width="1.5" PointX="4" PointY="0.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DatabaseProjectModel.TransactionHeader" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
         <AssociationConnector Association="DatabaseProjectModel.FK_Cart_ToJewel" ManuallyRouted="false" />
         <AssociationConnector Association="DatabaseProjectModel.FK_Cart_ToUser" ManuallyRouted="false" />
