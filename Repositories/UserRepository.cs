@@ -14,6 +14,18 @@ namespace PSDLabProject.Repositories
         {
             return db.MsUsers.Where(x => x.UserEmail == email).FirstOrDefault();
         }
+        public static string findPasswordByEmail(string email)
+        {
+            return db.MsUsers.Where(x => x.UserEmail == email)
+                             .Select(x => x.UserPassword)
+                             .FirstOrDefault();
+        }
+        public static string findRoleByEmail(string email)
+        {
+            return db.MsUsers.Where(x => x.UserEmail == email)
+                             .Select(x => x.UserRole)
+                             .FirstOrDefault();
+        }
 
         public static string addUser(MsUser user)
         {

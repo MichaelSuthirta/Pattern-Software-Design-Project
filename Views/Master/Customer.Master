@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Customer.master.cs" Inherits="PSDLabProject.Views.Master.Customer" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="background-color:cornflowerblue">
+            <nav>
+            <h1 style="color:white">Jewels & Diamonds (Customer)</h1>
+            <div>
+                <asp:Button ID="HomeButton" runat="server" Text="Home" OnClick="HomeButton_Click" />
+                <asp:Button ID="CartButton" runat="server" Text="Cart" OnClick="CartButton_Click" />
+                <asp:Button ID="OrderButton" runat="server" Text="MyOrder" OnClick="OrderButton_Click" />
+                <asp:Button ID="ProfileButton" runat="server" Text="Profile" OnClick="ProfileButton_Click" />
+                <asp:Button ID="LogoutButton" runat="server" Text="Logout" OnClick="LogoutButton_Click" />
+            </div>
+            </nav>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

@@ -95,17 +95,23 @@
     <Content Include="Views\JewelPages\JewelViewer.aspx" />
     <Content Include="Views\JewelPages\User\Cart.aspx" />
     <Content Include="Views\JewelPages\User\Details.aspx" />
+    <Content Include="Views\LoginRegisterPages\LoginPage.aspx" />
+    <Content Include="Views\LoginRegisterPages\RegisterPage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\JewelController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Factories\CartFactory.cs" />
     <Compile Include="Factories\HeaderFactory.cs" />
     <Compile Include="Factories\JewelFactory.cs" />
     <Compile Include="Factories\TransactionDetailsFactory.cs" />
     <Compile Include="Factories\UserFactory.cs" />
     <Compile Include="Handlers\Handler.cs" />
+    <Compile Include="Handlers\LoginHandler.cs" />
+    <Compile Include="Handlers\RegisterHandler.cs" />
     <Compile Include="Models\Cart.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -188,6 +194,41 @@
     <Compile Include="Views\JewelPages\User\Details.aspx.designer.cs">
       <DependentUpon>Details.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\LoginRegisterPages\LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\LoginRegisterPages\LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginRegisterPages\RegisterPage.aspx.cs">
+      <DependentUpon>RegisterPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\LoginRegisterPages\RegisterPage.aspx.designer.cs">
+      <DependentUpon>RegisterPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Master\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Master\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Master\Customer.Master.cs">
+      <DependentUpon>Customer.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Master\Customer.Master.designer.cs">
+      <DependentUpon>Customer.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Master\Guest.Master.cs">
+      <DependentUpon>Guest.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Master\Guest.Master.designer.cs">
+      <DependentUpon>Guest.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="Models\Model.edmx">
@@ -198,6 +239,9 @@
       <DependentUpon>Model.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
+    <Content Include="Views\Master\Admin.Master" />
+    <Content Include="Views\Master\Customer.Master" />
+    <Content Include="Views\Master\Guest.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
