@@ -17,14 +17,24 @@ namespace PSDLabProject.Controllers
             return Handler.jewelExists(ID);
         }
 
-        public static string accessDetailPage(int jewelID)
+        public static string accessDetailPage(int jewelID, string role)
         {
             if (!jewelExists(jewelID))
             {
                 return "Not found";
             }
-            
-            return "User\\Details.aspx?id=" + jewelID.ToString();
+            if (role.Equals("Customer"))
+            {
+                return "User\\Details.aspx?id=" + jewelID.ToString();
+            }
+            else if(role.Equals("Admin"))
+            {
+                return "Admin\\Details.aspx?id=" + jewelID.ToString();
+            }
+            else
+            {
+                return "Unauthorized access.";
+            }
         }
 
         public static MsJewel getJewel(int ID)
