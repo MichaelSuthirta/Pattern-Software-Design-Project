@@ -29,17 +29,16 @@ namespace PSDLabProject.Views.JewelPages
         protected void detailButton_Command(object sender, CommandEventArgs e)
         {
             string role = Session["role"]?.ToString();
-            if (role != "User" && role != "Admin")
-            {
-                errorMsg.Text = "Unauthorized access.";
-                return;
-            }
 
             int ID = Convert.ToInt32(e.CommandArgument);
-            string url = JewelController.accessDetailPage(ID);
+            string url = JewelController.accessDetailPage(ID, role);
             if (url == "Not found.")
             {
                 errorMsg.Text = "Unable to view details";
+            }
+            else if(url == "Unauthorized access.")
+            {
+                errorMsg.Text = url;
             }
             else
             {
