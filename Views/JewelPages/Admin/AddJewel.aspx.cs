@@ -12,7 +12,7 @@ namespace PSDLabProject.Views.JewelPages.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
                 categoryDropdown.DataSource = JewelController.getCategoryNames();
                 categoryDropdown.DataBind();
@@ -20,6 +20,7 @@ namespace PSDLabProject.Views.JewelPages.Admin
                 brandDropdown.DataSource = JewelController.getBrandNames();
                 brandDropdown.DataBind();
             }
+
         }
 
         protected void addButton_Click(object sender, EventArgs e)
@@ -30,7 +31,7 @@ namespace PSDLabProject.Views.JewelPages.Admin
             string priceStr = priceText.Text;
             string yearStr = yearText.Text;
             string result = JewelController.addJewel(name, brand, category, priceStr, yearStr);
-            if(result.Equals("Jewel added successfully."))
+            if (result.Equals("Jewel added successfully."))
             {
                 Response.Redirect("~\\Views\\JewelPages\\JewelViewer.aspx");
             }

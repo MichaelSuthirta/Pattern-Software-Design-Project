@@ -1,14 +1,16 @@
-﻿using System;
-using System.Web.UI.WebControls;
-using PSDLabProject.Handlers;  
-using PSDLabProject.Models;    
+﻿using PSDLabProject.Handlers;
+using System;
 using System.Collections.Generic;
+using PSDLabProject.Models;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
-namespace JAwelsAndDiamonds
+namespace PSDLabProject.Views.JewelPages.User
 {
     public partial class Cart : System.Web.UI.Page
     {
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

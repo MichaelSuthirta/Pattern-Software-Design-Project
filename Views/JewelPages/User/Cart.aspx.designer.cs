@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JAwelsAndDiamonds
+namespace PSDLabProject.Views.JewelPages.User
 {
 
 

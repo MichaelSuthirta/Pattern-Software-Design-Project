@@ -16,17 +16,17 @@ namespace PSDLabProject.Views.Master
 
         protected void HomeButton_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Views/JewelPages/JewelViewer.aspx");
         }
 
         protected void CartButton_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Views/JewelPages/User/Cart.aspx");
         }
 
         protected void OrderButton_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Views/JewelPages/User/Details.aspx");
         }
 
         protected void ProfileButton_Click(object sender, EventArgs e)

@@ -8,11 +8,11 @@ using System.Web.UI.WebControls;
 
 namespace PSDLabProject.Views.JewelPages.Admin
 {
-    public partial class EditJewel : System.Web.UI.Page
+    public partial class UpdateJewel : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
                 brandDropdown.DataSource = JewelController.getBrandNames();
                 brandDropdown.DataBind();
@@ -33,7 +33,7 @@ namespace PSDLabProject.Views.JewelPages.Admin
             string priceStr = priceText.Text;
             string yearStr = yearText.Text;
             messageText.Text = JewelController.updateJewelData(id, name, brand, category, priceStr, yearStr);
-            if(messageText.Text == "Updated data successfully.")
+            if (messageText.Text == "Updated data successfully.")
             {
                 Response.Redirect("~\\Views\\JewelPages\\JewelViewer.aspx");
             }

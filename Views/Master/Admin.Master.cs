@@ -16,12 +16,13 @@ namespace PSDLabProject.Views.Master
 
         protected void HomeButton_Click(object sender, EventArgs e)
         {
+            Response.Redirect("~/Views/JewelPages/JewelViewer.aspx");
 
         }
 
         protected void AddJewelButton_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Views/JewelPages/Admin/AddJewel.aspx");
         }
 
         protected void ReportButton_Click(object sender, EventArgs e)
@@ -41,7 +42,7 @@ namespace PSDLabProject.Views.Master
 
         protected void LogoutButton_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Views/Logout.aspx");
         }
     }
 }

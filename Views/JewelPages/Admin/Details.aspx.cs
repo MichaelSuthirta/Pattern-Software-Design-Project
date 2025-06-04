@@ -1,6 +1,5 @@
 ﻿using PSDLabProject.Controllers;
 using PSDLabProject.Models;
-using PSDLabProject.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,7 +41,7 @@ namespace PSDLabProject.Views.JewelPages.Admin
 
             string result = JewelController.deleteJewel(targetId);
 
-            if(result.Equals("Jewel removed successfully."))
+            if (result.Equals("Jewel removed successfully."))
             {
                 Response.Redirect("~\\Views\\JewelPages\\JewelViewer.aspx");
             }
@@ -51,5 +50,6 @@ namespace PSDLabProject.Views.JewelPages.Admin
                 msgLabel.Text = result;
             }
         }
+
     }
 }

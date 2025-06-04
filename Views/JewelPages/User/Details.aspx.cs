@@ -36,7 +36,7 @@ namespace PSDLabProject.Views.JewelPages.User
             int userId = Convert.ToInt32(Session["UserID"]);
             int.TryParse(qtyBox.Text, out int qty);
             string res = CartController.createCart(jewelId, userId, qty);
-            if(res.Equals("Added item to cart."))
+            if (res.Equals("Added item to cart."))
             {
                 Response.Redirect(".\\Cart.aspx");
             }
