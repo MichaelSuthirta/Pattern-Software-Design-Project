@@ -1,4 +1,5 @@
 ﻿using PSDLabProject.Controllers;
+using PSDLabProject.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,27 +14,21 @@ namespace PSDLabProject.Views.LoginRegisterPages
         private LoginController login = new LoginController();
         protected void Page_Load(object sender, EventArgs e)
         {
-            //    if (Request.Cookies["user"] != null)
-            //    {
-            //        HttpCookie cookie = Request.Cookies["user"];
-
-            //        if (int.TryParse(cookie["id"], out int id))
-            //        {
-            //            Response.Redirect("LoginPage.aspx");
-            //        }
-
-            //        users user = db.users.Find(id);
-
-            //        if (user == null) return;
-
-            //        Session["user"] = user;
-            //    }
-
-            //    if (Session["user"] != null)
-            //    {
-            //        Response.Redirect("HomePage.aspx");
-            //    }
-            //}
+            if (!IsPostBack)
+            {
+                HttpCookie cookie = Request.Cookies["UserLogin"];
+                if (cookie != null)
+                {
+                    string email = cookie["email"];
+                    MsUser user = login.userEmail(email);
+                    if (user != null)
+                    {
+                        Session["user"] = user;
+                        Session["role"] = user.UserRole;
+                        Response.Redirect("~/Views/JewelPages/JewelViewer.aspx");
+                    }
+                }
+            }
         }
 
         protected void LoginButton_Click(object sender, EventArgs e)
@@ -46,7 +41,18 @@ namespace PSDLabProject.Views.LoginRegisterPages
             if (message == "Password doesn't match") { MessageLabel.Text = message; }
             if (message == "Logged in successfully")
             {
-                //Session["user"] = User
+                MsUser user = login.userEmail(email);
+                Session["user"] = user;
+                Session["role"] = user.UserRole;
+
+                if (RememberMeCheckbox.Checked)
+                {
+                    HttpCookie cookie = new HttpCookie("UserLogin");
+                    cookie["email"] = user.UserEmail;
+                    cookie.Expires = DateTime.Now.AddDays(7);
+                    Response.Cookies.Add(cookie);
+                }
+
                 Response.Redirect("~/Views/JewelPages/JewelViewer.aspx");
             }
         }

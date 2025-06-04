@@ -1,4 +1,5 @@
 ﻿using PSDLabProject.Repositories;
+using PSDLabProject.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,11 @@ namespace PSDLabProject.Handlers
                 return "Password doesn't match";
             }
             return "Logged in successfully";
+        }
+
+        public MsUser userEmail(string email)
+        {
+            return UserRepository.findUserByEmail(email);
         }
     }
 }
