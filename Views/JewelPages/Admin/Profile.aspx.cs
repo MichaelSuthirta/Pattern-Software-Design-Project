@@ -40,4 +40,4 @@ namespace PSDLabProject.Views.JewelPages.Admin
             Response.Redirect("~/Views/JewelPages/Admin/ChangePassword.aspx");
         }
     }
-    }
+}

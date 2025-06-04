@@ -31,7 +31,7 @@ namespace PSDLabProject.Views.Master
 
         protected void ProfileButton_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Views/JewelPages/User/Profile.aspx");
         }
 
         protected void LogoutButton_Click(object sender, EventArgs e)
