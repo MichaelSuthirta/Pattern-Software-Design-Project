@@ -187,3 +187,7 @@ C:\File_bebas\Binus's tasks\AOL Semester 4\PatternSoftwareDesign-2\Pattern-Softw
 C:\File_bebas\Binus's tasks\AOL Semester 4\PatternSoftwareDesign-2\Pattern-Software-Design-Project\obj\Debug\PSDLabPr.A4C488CF.Up2Date
 C:\File_bebas\Binus's tasks\AOL Semester 4\PatternSoftwareDesign-2\Pattern-Software-Design-Project\obj\Debug\PSDLabProject.dll
 C:\File_bebas\Binus's tasks\AOL Semester 4\PatternSoftwareDesign-2\Pattern-Software-Design-Project\obj\Debug\PSDLabProject.pdb
+D:\Github\Pattern-Software-Design-Projects\obj\Debug\PSDLabProject.csproj.AssemblyReference.cache
+D:\Github\Pattern-Software-Design-Projects\obj\Debug\PSDLabProject.csproj.CoreCompileInputs.cache
+D:\Github\Pattern-Software-Design-Projects\obj\Debug\PSDLabProject.dll
+D:\Github\Pattern-Software-Design-Projects\obj\Debug\PSDLabProject.pdb
