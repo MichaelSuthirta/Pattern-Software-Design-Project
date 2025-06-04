@@ -26,7 +26,7 @@ namespace PSDLabProject.Views.Master
 
         protected void OrderButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Views/JewelPages/User/Details.aspx");
+            Response.Redirect("~/Views/JewelPages/User/MyOrder.aspx");
         }
 
         protected void ProfileButton_Click(object sender, EventArgs e)

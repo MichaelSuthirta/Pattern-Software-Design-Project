@@ -7,21 +7,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PSDLabProject.Views.JewelPages.Admin
+namespace PSDLabProject.Views.JewelPages.User
 {
 
 
-    public partial class HandleOrders
+    public partial class MyOrder
     {
-
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
         /// gvOrders control.

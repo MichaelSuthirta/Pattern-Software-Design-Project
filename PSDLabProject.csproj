@@ -90,12 +90,15 @@
     <Content Include="Views\JewelPages\Admin\AddJewel.aspx" />
     <Content Include="Views\JewelPages\Admin\ChangePassword.aspx" />
     <Content Include="Views\JewelPages\Admin\Details.aspx" />
+    <Content Include="Views\JewelPages\Admin\HandleOrder.aspx" />
     <Content Include="Views\JewelPages\Admin\Profile.aspx" />
     <Content Include="Views\JewelPages\Admin\UpdateJewel.aspx" />
     <Content Include="Views\JewelPages\JewelViewer.aspx" />
     <Content Include="Views\JewelPages\User\Cart.aspx" />
     <Content Include="Views\JewelPages\User\ChangePassword.aspx" />
     <Content Include="Views\JewelPages\User\Details.aspx" />
+    <Content Include="Views\JewelPages\User\MyOrder.aspx" />
+    <Content Include="Views\JewelPages\User\Profile.aspx" />
     <Content Include="Views\LoginRegisterPages\LoginPage.aspx" />
     <Content Include="Views\LoginRegisterPages\RegisterPage.aspx" />
     <Content Include="Views\Logout.aspx" />
@@ -175,6 +178,13 @@
     <Compile Include="Views\JewelPages\Admin\Details.aspx.designer.cs">
       <DependentUpon>Details.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\JewelPages\Admin\HandleOrder.aspx.cs">
+      <DependentUpon>HandleOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\JewelPages\Admin\HandleOrder.aspx.designer.cs">
+      <DependentUpon>HandleOrder.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\JewelPages\Admin\Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -216,6 +226,20 @@
     </Compile>
     <Compile Include="Views\JewelPages\User\Details.aspx.designer.cs">
       <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\JewelPages\User\MyOrder.aspx.cs">
+      <DependentUpon>MyOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\JewelPages\User\MyOrder.aspx.designer.cs">
+      <DependentUpon>MyOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\JewelPages\User\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\JewelPages\User\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginRegisterPages\LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>

@@ -32,6 +32,7 @@ namespace PSDLabProject.Views.Master
 
         protected void HandleOrdersButton_Click(object sender, EventArgs e)
         {
+            Response.Redirect("~/Views/JewelPages/Admin/HandleOrder.aspx");
 
         }
 

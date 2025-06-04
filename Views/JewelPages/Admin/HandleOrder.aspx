@@ -1,14 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HandleOrders.aspx.cs" Inherits="PSDLabProject.Views.JewelPages.Admin.HandleOrders" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Master/Admin.Master" AutoEventWireup="true" CodeBehind="HandleOrder.aspx.cs" Inherits="PSDLabProject.Views.JewelPages.Admin.HandleOrder" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div>
             <asp:GridView ID="gvOrders" runat="server" AutoGenerateColumns="False" OnRowCommand="gvOrders_RowCommand">
             <Columns>
                 <asp:BoundField DataField="TransactionID" HeaderText="Transaction ID" />
@@ -29,6 +23,5 @@
             </Columns>
         </asp:GridView>
         </div>
-    </form>
-</body>
-</html>
+
+</asp:Content>
