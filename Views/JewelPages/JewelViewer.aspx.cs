@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace PSDLabProject.Views.JewelPages
 {
-    public partial class ViewJewels : System.Web.UI.Page
+    public partial class JewelViewer : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
