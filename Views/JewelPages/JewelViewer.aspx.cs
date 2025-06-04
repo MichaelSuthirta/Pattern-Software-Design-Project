@@ -13,13 +13,28 @@ namespace PSDLabProject.Views.JewelPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            UserJewelGridview.DataSource = Handler.getJewelList();
-            UserJewelGridview.DataBind();
+            if (Session["user"] == null || Session["role"] == null)
+            {
+                Response.Redirect("~/Views/LoginRegisterPages/LoginPage.aspx");
+                return;
+            }
+
+            if (!IsPostBack)
+            {
+                UserJewelGridview.DataSource = Handler.getJewelList();
+                UserJewelGridview.DataBind();
+            }
         }
 
         protected void detailButton_Command(object sender, CommandEventArgs e)
         {
-            //errorMsg.Text = "Unable to view details";
+            string role = Session["role"]?.ToString();
+            if (role != "User" && role != "Admin")
+            {
+                errorMsg.Text = "Unauthorized access.";
+                return;
+            }
+
             int ID = Convert.ToInt32(e.CommandArgument);
             string url = JewelController.accessDetailPage(ID);
             if (url == "Not found.")

@@ -14,7 +14,7 @@
         <asp:Button ID="LoginButton" runat="server" Text="Login" OnClick="LoginButton_Click" />
     </div>
     <div>
-        <asp:CheckBox ID="LoginCheckbox" runat="server" Text="Remember Me" />
+        <asp:CheckBox ID="RememberMeCheckbox" runat="server" Text="Remember Me" />
         <asp:Label ID="MessageLabel" runat="server" Text=""></asp:Label>
     </div>
 </asp:Content>

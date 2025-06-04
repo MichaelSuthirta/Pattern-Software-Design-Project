@@ -36,7 +36,7 @@ namespace PSDLabProject.Views.Master
 
         protected void LogoutButton_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Views/Logout.aspx");
         }
     }
 }

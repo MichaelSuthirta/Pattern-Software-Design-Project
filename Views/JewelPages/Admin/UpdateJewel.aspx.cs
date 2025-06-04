@@ -20,6 +20,8 @@ namespace PSDLabProject.Views.JewelPages.Admin
                 categoryDropdown.DataSource = JewelController.getCategoryNames();
                 categoryDropdown.DataBind();
             }
+
+
         }
 
         protected void confirmButton_Click(object sender, EventArgs e)

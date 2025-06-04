@@ -97,6 +97,7 @@
     <Content Include="Views\JewelPages\User\Details.aspx" />
     <Content Include="Views\LoginRegisterPages\LoginPage.aspx" />
     <Content Include="Views\LoginRegisterPages\RegisterPage.aspx" />
+    <Content Include="Views\Logout.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -207,6 +208,13 @@
     </Compile>
     <Compile Include="Views\LoginRegisterPages\RegisterPage.aspx.designer.cs">
       <DependentUpon>RegisterPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Master\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
