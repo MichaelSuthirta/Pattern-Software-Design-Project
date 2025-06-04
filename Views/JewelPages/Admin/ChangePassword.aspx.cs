@@ -8,12 +8,12 @@ using System.Web.UI.WebControls;
 
 namespace PSDLabProject.Views.JewelPages.Admin
 {
-    public partial class ChangePassword : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
+	public partial class ChangePassword : System.Web.UI.Page
+	{
+		protected void Page_Load(object sender, EventArgs e)
+		{
             if (Session["UserID"] == null)
-                Response.Redirect("~/Login.aspx");
+                Response.Redirect("~/Views/LoginRegisterPages/LoginPage.aspx");
         }
 
         protected void btnChangePassword_Click(object sender, EventArgs e)

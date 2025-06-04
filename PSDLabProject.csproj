@@ -76,9 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\DatabaseProject.mdf" />
-    <Content Include="App_Data\DatabaseProject_log.ldf">
-      <DependentUpon>DatabaseProject.mdf</DependentUpon>
-    </Content>
+    <Content Include="App_Data\DatabaseProject_log.ldf" />
     <Content Include="Models\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model.Context.cs</LastGenOutput>
@@ -90,10 +88,13 @@
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
     <Content Include="Views\JewelPages\Admin\AddJewel.aspx" />
+    <Content Include="Views\JewelPages\Admin\ChangePassword.aspx" />
     <Content Include="Views\JewelPages\Admin\Details.aspx" />
+    <Content Include="Views\JewelPages\Admin\Profile.aspx" />
     <Content Include="Views\JewelPages\Admin\UpdateJewel.aspx" />
     <Content Include="Views\JewelPages\JewelViewer.aspx" />
     <Content Include="Views\JewelPages\User\Cart.aspx" />
+    <Content Include="Views\JewelPages\User\ChangePassword.aspx" />
     <Content Include="Views\JewelPages\User\Details.aspx" />
     <Content Include="Views\LoginRegisterPages\LoginPage.aspx" />
     <Content Include="Views\LoginRegisterPages\RegisterPage.aspx" />
@@ -160,12 +161,26 @@
     <Compile Include="Views\JewelPages\Admin\AddJewel.aspx.designer.cs">
       <DependentUpon>AddJewel.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\JewelPages\Admin\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\JewelPages\Admin\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\JewelPages\Admin\Details.aspx.cs">
       <DependentUpon>Details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\JewelPages\Admin\Details.aspx.designer.cs">
       <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\JewelPages\Admin\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\JewelPages\Admin\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\JewelPages\Admin\UpdateJewel.aspx.cs">
       <DependentUpon>UpdateJewel.aspx</DependentUpon>
@@ -187,6 +202,13 @@
     </Compile>
     <Compile Include="Views\JewelPages\User\Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\JewelPages\User\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\JewelPages\User\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\JewelPages\User\Details.aspx.cs">
       <DependentUpon>Details.aspx</DependentUpon>
